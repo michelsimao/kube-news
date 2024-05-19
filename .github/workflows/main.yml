@@ -23,3 +23,25 @@ jobs:
           tags: |
             michelsimao/fabricio-kube-news:${{github.run_number}}
             michelsimao/fabricio-kube-news:latest
+
+  CD:
+    runs-on: ubuntu-latest
+    needs: [CI]
+    steps:
+      - uses: actions/checkout@v4.1.5
+      - name: Definindo o context
+        uses: Azure/k8s-set-context@v3.0
+        with: 
+          method: kubeconfig
+          kubeconfig: ${{secrets.K8S_CONFIG}}
+
+
+
+
+
+
+
+
+
+        
+  
