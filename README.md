@@ -1,4 +1,5 @@
 # Projeto kube-news
+https://www.youtube.com/watch?v=TKwXC5qSjkE&ab_channel=FabricioVeronez
 
 ### Objetivo
 O projeto Kube-news é uma aplicação escrita em NodeJS e tem como objetivo ser uma aplicação de exemplo pra trabalhar com o uso de containers.
