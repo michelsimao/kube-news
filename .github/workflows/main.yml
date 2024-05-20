@@ -29,6 +29,13 @@ jobs:
     needs: [CI]
     steps:
       - uses: actions/checkout@v4.1.5
+      - name: Configurando as credenciais da aws
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{AWS-REGION}}
+          aws-access-key-id: ${{AWS-ACCESS-KEY}}
+          aws-secret-access-key: ${{AWS-SECRET-KEY}}
+    
       - name: Definindo o context
         uses: Azure/k8s-set-context@v3.0
         with: 
