@@ -37,7 +37,7 @@ jobs:
       - name: Deploy to Kubernetes cluster
         uses: Azure/k8s-deploy@v4.9
         with:
-          images: michelsimao/fabricio-kube-news:${{github.run_number}} ## criar a secret
+          images: michelsimao/fabricio-kube-news:${{github.run_number}}
           manifests:
             k8s/deployment.yaml
           
